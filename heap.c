@@ -24,11 +24,13 @@ int k_heapBMAddBlock(KHEAPBM *heap, uintptr addr, uint32 size, uint32 bsize) {
 	bcnt = b->size / b->bsize;
 	bm = (uint8*)&b[1];
  
+ 	puts("clearing bitmap\n");
 	/* clear bitmap */
 	for (x = 0; x < bcnt; ++x) {
 			bm[x] = 0;
 	}
  
+ 	puts("reserving bitmap\n");
 	/* reserve room for bitmap */
 	bcnt = (bcnt / bsize) * bsize < bcnt ? bcnt / bsize + 1 : bcnt / bsize;
 	for (x = 0; x < bcnt; ++x) {
@@ -65,12 +67,7 @@ void *k_heapBMAlloc(KHEAPBM *heap, uint32 size) {
 			bneed = (size / b->bsize) * b->bsize < size ? size / b->bsize + 1 : size / b->bsize;
 			bm = (uint8*)&b[1];
  
-			for (x = (b->lfb + 1 >= bcnt ? 0 : b->lfb + 1); x < b->lfb; ++x) {
-				/* just wrap around */
-				if (x >= bcnt) {
-					x = 0;
-				}		
- 
+			for (x = (b->lfb + 1 >= bcnt ? 0 : b->lfb + 1); x != b->lfb; x = x + 1 >= bcnt ? 0 : x + 1) {
 				if (bm[x] == 0) {	
 					/* count free blocks */
 					for (y = 0; bm[x + y] == 0 && y < bneed && (x + y) < bcnt; ++y);
