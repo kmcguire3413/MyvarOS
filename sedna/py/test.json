@@ -1,0 +1,423 @@
+[
+  {
+    "line_num": 1,
+    "xtype": "is_stmt_import",
+    "line_pos": 0,
+    "value": "System"
+  },
+  {
+    "line_num": 2,
+    "xtype": "is_stmt_import",
+    "line_pos": 1,
+    "value": "Kernel"
+  },
+  {
+    "line_num": 4,
+    "xtype": "is_stmt_scope",
+    "value": "MyvarOS",
+    "line_pos": 1
+  },
+  {
+    "line_num": 6,
+    "xtype": "is_attribute",
+    "line_pos": 1,
+    "value": "move"
+  },
+  {
+    "line_num": 7,
+    "xtype": "is_attribute",
+    "line_pos": 1,
+    "value": "garbage"
+  },
+  {
+    "line_num": 8,
+    "xtype": "is_attribute",
+    "line_pos": 1,
+    "value": "heap"
+  },
+  {
+    "line_num": 9,
+    "xtype": "is_stmt_type",
+    "value": "Program",
+    "line_pos": 1,
+    "body": [
+      {
+        "line_num": 11,
+        "xtype": "is_attribute",
+        "line_pos": 5,
+        "value": "entry"
+      },
+      {
+        "name": "Main",
+        "xtype": "is_stmt_fn",
+        "line_pos": 5,
+        "body": [
+          {
+            "name": "a",
+            "typename": "List",
+            "is_ref": null,
+            "xtype": "is_stmt_dec",
+            "generic_args": [
+              {
+                "typename": "MyType",
+                "generic_args": [
+                  {
+                    "typename": "Sync",
+                    "generic_args": [
+                      {
+                        "typename": "A",
+                        "generic_args": [
+                          
+                        ]
+                      },
+                      {
+                        "typename": "B",
+                        "generic_args": [
+                          
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "typename": "Z",
+                    "generic_args": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "typename": "M",
+                "generic_args": [
+                  
+                ]
+              },
+              {
+                "typename": "N",
+                "generic_args": [
+                  
+                ]
+              },
+              {
+                "typename": "Q",
+                "generic_args": [
+                  
+                ]
+              },
+              {
+                "typename": "P",
+                "generic_args": [
+                  
+                ]
+              }
+            ],
+            "line_pos": 9,
+            "line_num": 14,
+            "value": null
+          },
+          {
+            "name": "b",
+            "typename": "int32",
+            "xtype": "is_stmt_dec",
+            "generic_args": [
+              
+            ],
+            "line_pos": 9,
+            "line_num": 15,
+            "is_move": null,
+            "value": null
+          },
+          {
+            "xtype": "is_stmt_assignment",
+            "dst": "b.member.submember",
+            "line_pos": 9,
+            "body": [
+              {
+                "line_num": 17,
+                "xtype": "is_name",
+                "line_pos": 13,
+                "value": "a"
+              }
+            ],
+            "line_num": 17,
+            "value": null
+          },
+          {
+            "xtype": "is_stmt_assignment",
+            "dst": "b",
+            "line_pos": 9,
+            "body": [
+              {
+                "line_num": 19,
+                "xtype": "is_number",
+                "value": null,
+                "line_pos": 13
+              },
+              {
+                "line_num": 19,
+                "xtype": "is_add",
+                "value": null,
+                "line_pos": 15
+              },
+              {
+                "line_num": 19,
+                "xtype": "is_number",
+                "value": null,
+                "line_pos": 17
+              },
+              {
+                "line_num": 19,
+                "xtype": "is_add",
+                "value": null,
+                "line_pos": 19
+              },
+              {
+                "name_parts": [
+                  "a",
+                  "call_something"
+                ],
+                "args": [
+                  [
+                    {
+                      "line_num": 19,
+                      "xtype": "is_name",
+                      "line_pos": 23,
+                      "value": "b.grape"
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_add",
+                      "value": null,
+                      "line_pos": 25
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_name",
+                      "line_pos": 27,
+                      "value": "a.zeta"
+                    }
+                  ],
+                  [
+                    {
+                      "line_num": 19,
+                      "xtype": "is_number",
+                      "value": null,
+                      "line_pos": 30
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_add",
+                      "value": null,
+                      "line_pos": 32
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_name",
+                      "line_pos": 34,
+                      "value": "a.figure"
+                    }
+                  ],
+                  [
+                    {
+                      "line_num": 19,
+                      "xtype": "is_number",
+                      "value": null,
+                      "line_pos": 37
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_add",
+                      "value": null,
+                      "line_pos": 39
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_number",
+                      "value": null,
+                      "line_pos": 41
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_mul",
+                      "line_pos": 43,
+                      "value": null
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_number",
+                      "value": null,
+                      "line_pos": 45
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_div",
+                      "line_pos": 47,
+                      "value": null
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_number",
+                      "value": null,
+                      "line_pos": 49
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_add",
+                      "value": null,
+                      "line_pos": 51
+                    },
+                    {
+                      "line_num": 19,
+                      "xtype": "is_name",
+                      "line_pos": 53,
+                      "value": "b"
+                    }
+                  ]
+                ],
+                "line_pos": 21,
+                "xtype": "is_invocation",
+                "line_num": 19,
+                "value": null
+              },
+              {
+                "line_num": 19,
+                "xtype": "is_mul",
+                "line_pos": 56,
+                "value": null
+              },
+              {
+                "line_num": 19,
+                "xtype": "is_subexpression",
+                "line_pos": 58,
+                "value": null,
+                "body": [
+                  {
+                    "line_num": 19,
+                    "xtype": "is_number",
+                    "value": null,
+                    "line_pos": 59
+                  },
+                  {
+                    "line_num": 19,
+                    "xtype": "is_mul",
+                    "line_pos": 61,
+                    "value": null
+                  },
+                  {
+                    "line_num": 19,
+                    "xtype": "is_number",
+                    "value": null,
+                    "line_pos": 63
+                  }
+                ]
+              }
+            ],
+            "line_num": 19,
+            "value": null
+          },
+          {
+            "cond_false": [
+              {
+                "xtype": "is_stmt_assignment",
+                "dst": "r",
+                "line_pos": 10,
+                "body": [
+                  {
+                    "line_num": 28,
+                    "xtype": "is_name",
+                    "line_pos": 14,
+                    "value": "r"
+                  },
+                  {
+                    "line_num": 28,
+                    "xtype": "is_add",
+                    "value": null,
+                    "line_pos": 16
+                  },
+                  {
+                    "line_num": 28,
+                    "xtype": "is_number",
+                    "value": null,
+                    "line_pos": 18
+                  }
+                ],
+                "line_num": 28,
+                "value": null
+              }
+            ],
+            "cond_true": [
+              {
+                "xtype": "is_stmt_assignment",
+                "dst": "k",
+                "line_pos": 10,
+                "body": [
+                  {
+                    "line_num": 23,
+                    "xtype": "is_name",
+                    "line_pos": 14,
+                    "value": "k"
+                  },
+                  {
+                    "line_num": 23,
+                    "xtype": "is_add",
+                    "value": null,
+                    "line_pos": 16
+                  },
+                  {
+                    "line_num": 23,
+                    "xtype": "is_number",
+                    "value": null,
+                    "line_pos": 18
+                  }
+                ],
+                "line_num": 23,
+                "value": null
+              },
+              {
+                "cond_false": [
+                  
+                ],
+                "cond_true": [
+                  {
+                    "xtype": "is_stmt_assignment",
+                    "dst": null,
+                    "line_pos": 11,
+                    "body": [
+                      {
+                        "name_parts": [
+                          "okhbiggerthan"
+                        ],
+                        "args": [
+                          
+                        ],
+                        "line_pos": 11,
+                        "xtype": "is_invocation",
+                        "line_num": 25,
+                        "value": null
+                      }
+                    ],
+                    "line_num": 25,
+                    "value": null
+                  }
+                ],
+                "xtype": "is_stmt_if",
+                "line_pos": 10,
+                "line_num": 24,
+                "value": null
+              }
+            ],
+            "xtype": "is_stmt_if",
+            "line_pos": 9,
+            "line_num": 22,
+            "value": null
+          }
+        ],
+        "args": [
+          
+        ],
+        "line_num": 12,
+        "value": null
+      }
+    ]
+  }
+]

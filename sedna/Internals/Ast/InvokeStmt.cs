@@ -9,23 +9,12 @@ namespace Sedna.Core.Internals.Ast
     public class InvokeStmt : IAst
     {
         public string Path { get; set; }
-        public List<IAst> Perams { get; set; } = new List<IAst>();
+        public List<IAst> Params { get; set; } = new List<IAst>();
 
         public override bool IsValid(Token raw)
         {
-            if(string.IsNullOrEmpty(raw.Raw))
-            {
-                return false;
-            }
-            if (char.IsDigit(raw.Raw[0]))
-            {
-                return false;
-            }
-            if (raw.Raw.Trim().EndsWith(")", StringComparison.Ordinal) && 
-                !raw.Raw.Trim().StartsWith("(", StringComparison.Ordinal))
-            {
-                return true;
-            }
+            // Need things this is grabbing to be handled by ValueStmt and
+            // then ValueStmt will create the InvokeStmt as needed.
             return false;
         }
 
@@ -39,7 +28,7 @@ namespace Sedna.Core.Internals.Ast
                 var x = IAst.ParseToken(new Token() { Raw = i.Trim() });
                 if(x != null)
                 {
-                    re.Perams.AddRange(x);
+                    re.Params.AddRange(x);
                 }
             }
 

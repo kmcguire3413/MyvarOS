@@ -3,11 +3,29 @@ imports Kernel
 
 scope MyvarOS
 
+@move
+@garbage
+@heap
 type Program
 {
-    @entry
+    @entry    
     fn Main() 
     {       
-        puts("Main");       
+        dec a: reference List<MyType<Sync<A, B>, Z>, M, N, Q, P>;
+        dec b: move int32;
+
+        b.member.submember = a;
+
+        b = 4 + 6 + a.call_something(b.grape + a.zeta, 4 + a.figure, 45 + 54 * 8 / 2 + b) * (9 * 3);   
+
+
+        if (a + b > 3) {
+        	k = k + 3;
+        	if (h > 3) {
+        		okhbiggerthan();
+        	}
+        } else {
+        	r = r + 2;
+        }
     }
 }

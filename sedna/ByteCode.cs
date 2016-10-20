@@ -128,7 +128,7 @@ namespace Sedna.Core
             if(Opcode is InvokeStmt)
             {
                 var x = Opcode as InvokeStmt;
-                foreach(var i in x.Perams)
+                foreach(var i in x.Params)
                 {
                     EmitParameter(i, ref count);
                 }
